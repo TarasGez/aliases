@@ -1,0 +1,33 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Taras Gez
+	email = taraspixel@gmail.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[alias]
+	s = status
+	p = pull
+	c = commit
+	co = checkout
+	cob = checkout -b
+	coo = checkout -
+	cod = checkout dev
+	r = rebase
+	rd = rebase dev
+	fp = push --force
+	db = branch --delete
+	ri = "!f() { git rebase -i HEAD~${1}; }; f"
+
+	alias = config --get-regexp ^alias
+[difftool "sourcetree"]
+	cmd = "'' "
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
+[init]
+	defaultBranch = dev
+[credential "https://portal-ua.globallogic.com"]
+	provider = generic

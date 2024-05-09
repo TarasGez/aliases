@@ -1,0 +1,20 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	name = Taras Gez
+	email = taraspixel@gmail.com
+[alias]
+	alias = config --get-regexp ^alias
+	s = status
+	p = pull
+	c = commit -m
+	co = checkout
+	coo = checkout -
+	cob = checkout -b
+	cod = checkout develop
+	codt = checkout dev
+	r = rebase
+	rd = rebase develop
+	rdt = rebase dev
+	fp = push --force
